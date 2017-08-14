@@ -1,20 +1,25 @@
 /*
- * If we use fully qualified name then only we can declare  the class of this package will be 
- * accessible.
- * here there is no need to import. but we have to use fully qualified name every time when  access the class or interface
+ * there three ways we can access the package from another package
+ * import packagename.*;
+ * import packagename.classname;
+ * fully qualified name.
+ * 
  */
 
-package mypack2;   //here in this mypack2 package we accessing the different package of same class file 
+//here we are showing how the packages are useful and accessible of package
+package mypackage; //here i have taken a package name as mypackage
 
-public class ClassA { //here i have taken the same class name as ClassA
+public class ClassA { //created  class as classA
+     
+		public void run(){ //given two methods and declared them that where dog a some properties like run and bark
+			
+			System.out.println("Dog has a property that can run ");
+			
+			}  
 
-	public static void main(String[] args) { //created main method
-		
-		mypackage.ClassA obj = new mypackage.ClassA(); //creating the fully qalified name for the classA object 
-		obj.bark(); //displays the properties 
-		obj.run();
-		System.out.println("here mypackage ClassA methods have been called");
-
+		public void bark(){
+			
+			System.out.println("Dog has a property that can bark");
 	}
 
 }
